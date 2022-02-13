@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:pet_app/screens/about.dart';
 import 'package:pet_app/screens/pet_article.dart';
 import 'package:pet_app/screens/pet_detail.dart';
-import 'package:pet_app/screens/service.dart';
+import 'package:pet_app/screens/service_view/service_detail_view.dart';
+import 'package:pet_app/screens/service_view/service_type.dart';
+import 'package:pet_app/screens/service_view/services_view.dart';
 import 'package:pet_app/screens/support.dart';
 import 'package:pet_app/utils/constant.dart';
 import 'screens/root_app.dart';
@@ -16,14 +18,18 @@ Route<dynamic> generateRoute(RouteSettings setting) {
       return MaterialPageRoute(builder: (context) => PetDetailPage(
         data: args["data"] as  Map<String, dynamic>
       ));
-    case serviceRoute :
-      return MaterialPageRoute(builder: (context) => ServiceScreen());
+    case serviceTypeRoute :
+      return MaterialPageRoute(builder: (context) => ServiceTypeView());
     case petArticleRoute :
       return MaterialPageRoute(builder: (context) => PetArticle());
     case supportRoute :
       return MaterialPageRoute(builder: (context) => Support());
     case aboutRoute :
       return MaterialPageRoute(builder: (context) => About());
+    case servicesRoute :
+      return MaterialPageRoute(builder: (context) => ServicesView());
+    case serviceDetailRoute :
+      return MaterialPageRoute(builder: (context) => ServiceDetailView());
     default:
       return MaterialPageRoute(
         builder: (context) => Scaffold(

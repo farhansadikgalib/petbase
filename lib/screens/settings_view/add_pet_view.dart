@@ -2,77 +2,81 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:pet_app/theme/color.dart';
 
-class Support extends StatefulWidget {
-  const Support({Key? key}) : super(key: key);
+class AddPetView extends StatefulWidget {
+  const AddPetView({Key? key}) : super(key: key);
 
   @override
-  _SupportState createState() => _SupportState();
+  _AddPetViewState createState() => _AddPetViewState();
 }
 
-class _SupportState extends State<Support> {
+class _AddPetViewState extends State<AddPetView> {
 
-  String? imageUrl;
+  String? petImageUrl;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: CustomScrollView(
-        slivers: [
-          SliverAppBar(
-            pinned: true,
-            floating: true,
-            title: Text("Report"),
-            centerTitle: false,
-          ),
-
-          SliverPadding(
-            padding: EdgeInsets.all(15),
-            sliver: SliverList(delegate: SliverChildListDelegate([
-              Text("Upload a Screenshot", textAlign: TextAlign.center,),
-              const SizedBox(height: 15,),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+      appBar: AppBar(
+        title: Text("Add Pet"),
+        centerTitle: false,
+        elevation: 0.5,
+      ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(15.0),
+          child: Column(
+            children: [
+              Center(
                 child: GestureDetector(
                   onTap: () async{
                     final ImagePicker _picker = ImagePicker();
                     final XFile? image = await _picker.pickImage(source: ImageSource.gallery);
                     if(image != null) {
-                      imageUrl = image.path;
+                      petImageUrl = image.path;
                       setState(() {});
                     }
                   },
                   child: Container(
-                      height: MediaQuery.of(context).size.height * 0.3,
+                      height: MediaQuery.of(context).size.height * 0.2,
+                      width: MediaQuery.of(context).size.height * 0.2,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           border: Border.all(width: 0.2)
                       ),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(10),
-                        child: imageUrl != null
+                        child: petImageUrl != null
                             ? Image.file(
-                          File(imageUrl!),
-                          fit: BoxFit.cover,
-                        )
+                                File(petImageUrl!),
+                                fit: BoxFit.cover,
+                              )
                             : Center(
-                          child: Text("Click to Upload"),
-                        ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text("Click to Upload", style: TextStyle(fontSize: 12),),
+                                ),
+                              ),
                       )
                   ),
                 ),
               ),
-
-              const SizedBox(height: 25,),
-
-              Text("What's the problem?", textAlign: TextAlign.center,),
-              const SizedBox(height: 15,),
-              _descriptionTextField(),
-              const SizedBox(height: 15,),
+              const SizedBox(height: 25),
+              _textField("Name"),
+              const SizedBox(height: 10),
+              _textField("Type"),
+              const SizedBox(height: 10),
+              _textField("Breed"),
+              const SizedBox(height: 10),
+              _textField("Age"),
+              const SizedBox(height: 10),
+              _textField("Fav Food or Toy"),
+              const SizedBox(height: 40),
 
               TextButton(
                 onPressed: () {},
-                child: Text("Send"),
+                child: Text("Done"),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(Colors.green),
                   foregroundColor: MaterialStateProperty.all(Colors.white),
@@ -80,28 +84,20 @@ class _SupportState extends State<Support> {
                   shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(50))),
                 ),
               ),
-
-              const SizedBox(height: 5,),
-
-              Text("Comments and Images will be transmitted by email to us."
-                  " Check your email for updates and replies. ", style: TextStyle(fontSize: 12),),
-
-            ])),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }
 
-  Widget _descriptionTextField() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 15),
+  Widget _textField(String hint) {
+    return SizedBox(
+      width: MediaQuery.of(context).size.width * 0.6,
       child: TextField(
-        textInputAction: TextInputAction.done,
-        maxLines: 4,
         decoration: InputDecoration(
-            hintText: "Enter your observations and concerns.",
-            hintStyle: TextStyle(fontSize: 14),
+            contentPadding: EdgeInsets.symmetric(horizontal: 20),
+            hintText: hint,
             enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
                 borderSide: BorderSide(width: 0.2)

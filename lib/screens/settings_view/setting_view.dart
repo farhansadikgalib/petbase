@@ -1,20 +1,21 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pet_app/screens/settings_view/add_pet_view.dart';
 import 'package:pet_app/theme/color.dart';
 import 'package:pet_app/utils/data.dart';
 import 'package:pet_app/widgets/custom_image.dart';
 import 'package:pet_app/widgets/icon_box.dart';
 import 'package:pet_app/widgets/setting_item.dart';
 
-class SettingPage extends StatefulWidget {
-  const SettingPage({ Key? key }) : super(key: key);
+class SettingView extends StatefulWidget {
+  const SettingView({ Key? key }) : super(key: key);
 
   @override
-  _SettingPageState createState() => _SettingPageState();
+  _SettingViewState createState() => _SettingViewState();
 }
 
-class _SettingPageState extends State<SettingPage> {
+class _SettingViewState extends State<SettingView> {
 
   @override
   Widget build(BuildContext context) {
@@ -93,7 +94,7 @@ class _SettingPageState extends State<SettingPage> {
           // SizedBox(height: 10),
           SettingItem(title: "Add Pet", leadingIcon: Icons.add_box, leadingIconColor: blue,
             onTap: (){
-
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>AddPetView()));
             }
           ),
           SizedBox(height: 10),
@@ -110,6 +111,12 @@ class _SettingPageState extends State<SettingPage> {
           ),
           SizedBox(height: 10),
           SettingItem(title: "Favorite Veterinarian", leadingIcon: Icons.favorite, leadingIconColor: sky,
+              onTap: (){
+
+              }
+          ),
+          SizedBox(height: 10),
+          SettingItem(title: "Favorite Services", leadingIcon: Icons.favorite, leadingIconColor: pink,
               onTap: (){
 
               }

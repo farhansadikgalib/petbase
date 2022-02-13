@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:pet_app/screens/home.dart';
 import 'package:pet_app/screens/pet.dart';
-import 'package:pet_app/screens/setting.dart';
+import 'package:pet_app/screens/settings_view/setting_view.dart';
 import 'package:pet_app/screens/vet_page.dart';
 import 'package:pet_app/theme/color.dart';
 import 'package:pet_app/utils/constant.dart';
@@ -41,7 +41,7 @@ class _RootAppState extends State<RootApp>  with TickerProviderStateMixin {
     {
       "icon" : "assets/icons/setting-border.svg",
       "active_icon" : "assets/icons/setting.svg",
-      "page" : SettingPage(),
+      "page" : SettingView(),
       "title" : ""
     },
   ];

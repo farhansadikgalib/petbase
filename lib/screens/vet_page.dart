@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:pet_app/theme/color.dart';
 import 'package:pet_app/widgets/custom_button.dart';
@@ -134,7 +133,6 @@ class _VetPageState extends State<VetPage> {
         }
       },
       child: Container(
-        // padding: EdgeInsets.all(4),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           border: Border.all(width: 0.2)

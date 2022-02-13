@@ -11,8 +11,17 @@ class _PetArticleState extends State<PetArticle> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text("Pet Article"),
+      body: CustomScrollView(
+        slivers: [
+          SliverAppBar(
+            pinned: true,
+            floating: true,
+            title: Text("Articles"),
+            centerTitle: false,
+          ),
+
+          SliverList(delegate: SliverChildListDelegate([])),
+        ],
       ),
     );
   }

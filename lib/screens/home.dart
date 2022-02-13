@@ -57,7 +57,6 @@ class _HomePageState extends State<HomePage> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          //DrawerHeader(child: Center(child: Image.asset("assets/icons/appLogo.png", color: primary, scale: 2,))),
           Padding(
             padding: const EdgeInsets.only(top: 20.0),
             child: Image.asset("assets/icons/appLogo.png", scale: 2,),
@@ -67,7 +66,7 @@ class _HomePageState extends State<HomePage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  _menuItem("Services", Icons.add_box, serviceRoute),
+                  _menuItem("Services", Icons.add_box, serviceTypeRoute),
                   _menuItem("Pet Articles", Icons.article, petArticleRoute),
                   _menuItem("Support", Icons.headphones, supportRoute),
                   _menuItem("About", Icons.info, aboutRoute),
