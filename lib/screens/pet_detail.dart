@@ -10,8 +10,9 @@ import 'package:pet_app/widgets/favorite_box.dart';
 import 'package:pet_app/widgets/icon_box.dart';
 
 class PetDetailPage extends StatefulWidget {
+  final data;
   PetDetailPage({ Key? key, required this.data}) : super(key: key);
-  var data;
+
   @override
   _PetDetailPageState createState() => _PetDetailPageState();
 }
@@ -188,6 +189,7 @@ class _PetDetailPageState extends State<PetDetailPage> {
                 SizedBox(height: 20,),
               ],
             ),
+            SizedBox(height: 80,)
           ],
         ),
       );

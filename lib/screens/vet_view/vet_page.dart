@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:pet_app/theme/color.dart';
+import 'package:pet_app/utils/constant.dart';
 import 'package:pet_app/widgets/custom_button.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -24,7 +25,12 @@ class _VetPageState extends State<VetPage> {
             centerTitle: false,
             title: Text("Inform Your Vet", style: TextStyle(color: primary),),
             actions: [
-              IconButton(onPressed: () {}, icon: Icon(Icons.search)),
+              IconButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, vetSearchRoute);
+                },
+                icon: Icon(Icons.search),
+              ),
             ],
           ),
           SliverList(delegate: SliverChildListDelegate([

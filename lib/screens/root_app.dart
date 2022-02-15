@@ -3,13 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:pet_app/screens/home.dart';
 import 'package:pet_app/screens/pet.dart';
 import 'package:pet_app/screens/settings_view/setting_view.dart';
-import 'package:pet_app/screens/vet_page.dart';
+import 'package:pet_app/screens/vet_view/vet_page.dart';
 import 'package:pet_app/theme/color.dart';
 import 'package:pet_app/utils/constant.dart';
 import 'package:pet_app/widgets/bottombar_item.dart';
 
 class RootApp extends StatefulWidget {
-  const RootApp({ Key? key }) : super(key: key);
+  final int? activeIndex;
+  const RootApp({ Key? key, this.activeIndex}) : super(key: key);
 
   @override
   _RootAppState createState() => _RootAppState();
@@ -58,6 +59,9 @@ class _RootAppState extends State<RootApp>  with TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
+    if(widget.activeIndex != null) {
+      activeTab = widget.activeIndex!;
+    }
      _controller.forward();
   }
 

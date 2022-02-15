@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pet_app/screens/settings_view/add_pet_view.dart';
 import 'package:pet_app/theme/color.dart';
+import 'package:pet_app/utils/constant.dart';
 import 'package:pet_app/utils/data.dart';
 import 'package:pet_app/widgets/custom_image.dart';
 import 'package:pet_app/widgets/icon_box.dart';
@@ -97,16 +98,16 @@ class _SettingViewState extends State<SettingView> {
               Navigator.push(context, MaterialPageRoute(builder: (context)=>AddPetView()));
             }
           ),
-          SizedBox(height: 10),
-          SettingItem(title: "Adoptions", leadingIcon: Icons.pets, leadingIconColor: green,
-            onTap: (){
-
-            }
-          ),
+          // SizedBox(height: 10),
+          // SettingItem(title: "Adoptions", leadingIcon: Icons.pets, leadingIconColor: green,
+          //   onTap: (){
+          //
+          //   }
+          // ),
           SizedBox(height: 10),
           SettingItem(title: "Favorite pets", leadingIcon: Icons.favorite, leadingIconColor: red,
             onTap: (){
-
+              Navigator.pushNamed(context, favoritePetRoute);
             }
           ),
           SizedBox(height: 10),
@@ -118,7 +119,7 @@ class _SettingViewState extends State<SettingView> {
           SizedBox(height: 10),
           SettingItem(title: "Favorite Services", leadingIcon: Icons.favorite, leadingIconColor: pink,
               onTap: (){
-
+                Navigator.pushNamed(context, favoriteServiceRoute);
               }
           ),
           SizedBox(height: 10),

@@ -25,7 +25,7 @@ class _AboutState extends State<About> {
                   " we’ll be here for you: petBase is your partner for every "
                   "step on your companion animal journey. Select the Vet and services you like and"
                   " we will put your customer profile in their online petBase store.Expect many new features in "
-                  "Spring “Find Your Best Friend”"),
+                  "Spring “Find Your Best Friend”", style: TextStyle(height: 1.5),),
             ],
           ),
         ),

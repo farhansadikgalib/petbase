@@ -18,8 +18,7 @@ class PetPage extends StatefulWidget {
 class _PetPageState extends State<PetPage> {
   @override
   Widget build(BuildContext context) {
-    return 
-    CustomScrollView(
+    return CustomScrollView(
         slivers: <Widget>[
           SliverAppBar(
             pinned: true,
@@ -59,7 +58,7 @@ class _PetPageState extends State<PetPage> {
               child: Row(
                 children: [
                   Expanded(
-                    child: CustomTextBox(hint: "Search", prefix: Icon(Icons.search, color: Colors.grey), )
+                    child: CustomTextBox(hint: "Search By Breed", prefix: Icon(Icons.search, color: Colors.grey), )
                   ),
                   SizedBox(width: 10,),
                   IconBox(child: Icon(Icons.filter_list_rounded, color: Colors.white), bgColor: secondary, radius: 10,)

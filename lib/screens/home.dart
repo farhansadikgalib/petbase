@@ -4,8 +4,8 @@ import 'package:pet_app/theme/color.dart';
 import 'package:pet_app/utils/constant.dart';
 import 'package:pet_app/utils/data.dart';
 import 'package:pet_app/widgets/category_item.dart';
-import 'package:pet_app/widgets/notification_box.dart';
 import 'package:pet_app/widgets/pet_item.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({ Key? key }) : super(key: key);
@@ -27,15 +27,21 @@ class _HomePageState extends State<HomePage> {
             floating: true,
             foregroundColor: Colors.black,
             actions: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: NotificationBox(
-                  notifiedNumber: 1,
-                  onTap: () {
-
-                  },
-                ),
-              )
+              // Padding(
+              //   padding: const EdgeInsets.all(8.0),
+              //   child: NotificationBox(
+              //     notifiedNumber: 1,
+              //     onTap: () {
+              //
+              //     },
+              //   ),
+              // )
+              IconButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, petSearchRoute);
+                },
+                icon: Icon(Icons.search),
+              ),
             ],
             // title: getAppBar(),
             title: Text("Home"),
@@ -66,10 +72,10 @@ class _HomePageState extends State<HomePage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  _menuItem("Services", Icons.add_box, serviceTypeRoute),
-                  _menuItem("Pet Articles", Icons.article, petArticleRoute),
-                  _menuItem("Support", Icons.headphones, supportRoute),
-                  _menuItem("About", Icons.info, aboutRoute),
+                  _menuItem("Services", Icon(Icons.add_box, color: blue,), serviceTypeRoute),
+                  _menuItem("Pet Articles", Icon(Icons.article, color: Colors.lightGreen,), petArticleRoute),
+                  _menuItem("Support", Icon(Icons.headphones, color: red,), supportRoute),
+                  _menuItem("About", Icon(Icons.info, color: Colors.pink.shade200,), aboutRoute),
                 ],
               ),
             ),
@@ -79,48 +85,49 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  Widget _menuItem(String title, IconData iconData, String route) {
+  Widget _menuItem(String title, Widget iconWidget, String route) {
     return ListTile(
       onTap: () {
         Navigator.of(context).pushNamed(route);
       },
-      leading: Icon(iconData),
+      leading: iconWidget,
       title: Text(title),
     );
   }
 
-  Widget getAppBar(){
-    return Container(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Expanded(child:
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      Icon(Icons.place_outlined, color: labelColor, size: 20,),
-                      SizedBox(width: 5,),
-                      Text("Location", style: TextStyle(color: labelColor, fontSize: 13,),),
-                    ],
-                  ),
-                  SizedBox(height: 3,),
-                  Text("Phnom Penh, Cambodia", style: TextStyle(color: textColor, fontWeight: FontWeight.w500, fontSize: 14,)),
-                ],
-              )
-            ),
-            NotificationBox(
-              notifiedNumber: 1,
-              onTap: () {
-
-              },
-            )
-          ],
-        ),
-      );
-  }
+  // Widget getAppBar(){
+  //   return Container(
+  //       child: Row(
+  //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+  //         children: [
+  //           Expanded(child:
+  //             Column(
+  //               mainAxisAlignment: MainAxisAlignment.center,
+  //               crossAxisAlignment: CrossAxisAlignment.start,
+  //               children: [
+  //                 Row(
+  //                   children: [
+  //                     Icon(Icons.place_outlined, color: labelColor, size: 20,),
+  //                     SizedBox(width: 5,),
+  //                     Text("Location", style: TextStyle(color: labelColor, fontSize: 13,),),
+  //                   ],
+  //                 ),
+  //                 SizedBox(height: 3,),
+  //                 Text("Phnom Penh, Cambodia", style: TextStyle(color: textColor, fontWeight: FontWeight.w500, fontSize: 14,)),
+  //               ],
+  //             )
+  //           ),
+  //
+  //           NotificationBox(
+  //             notifiedNumber: 1,
+  //             onTap: () {
+  //
+  //             },
+  //           )
+  //         ],
+  //       ),
+  //     );
+  // }
 
   buildBody(){
     return

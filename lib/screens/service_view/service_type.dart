@@ -20,6 +20,14 @@ class _ServiceTypeViewState extends State<ServiceTypeView> {
             floating: true,
             title: Text("Service Types"),
             centerTitle: false,
+            actions: [
+              IconButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, serviceSearchRoute);
+                },
+                icon: Icon(Icons.search),
+              ),
+            ],
           ),
           SliverPadding(
             padding: EdgeInsets.all(15),
