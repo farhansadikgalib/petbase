@@ -1,7 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:pet_app/router.dart';
-import 'package:pet_app/theme/color.dart';
 import 'package:pet_app/utils/data.dart';
 import 'package:pet_app/widgets/category_item.dart';
 import 'package:pet_app/widgets/pet_item.dart';
