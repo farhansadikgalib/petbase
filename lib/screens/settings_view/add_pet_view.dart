@@ -41,8 +41,9 @@ class _AddPetViewState extends State<AddPetView> {
                       height: MediaQuery.of(context).size.height * 0.2,
                       width: MediaQuery.of(context).size.height * 0.2,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          border: Border.all(width: 0.2)
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(width: 0.2),
+                        color: Theme.of(context).cardColor,
                       ),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(10),

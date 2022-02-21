@@ -38,5 +38,5 @@ const blue = Color(0xFF509BE4);
 // const Color kCardColorD = const Color(0XFF5b5b5b);
 // const Color kCardColorD = const Color(0XFF242424);
 const Color kCardColorD = const Color(0XFF1b1b1b);
-
-Color kCardColorL = Colors.grey.shade100;
+// Color kCardColorL = Colors.grey.shade100;
+Color kCardColorL = Colors.white;

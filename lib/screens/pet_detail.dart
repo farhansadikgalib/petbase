@@ -32,11 +32,11 @@ class _PetDetailPageState extends State<PetDetailPage> {
   }
 
   animatedBody(){
-    return 
-      AnimatedCrossFade(firstChild: getBody(), secondChild: Container(), 
-        crossFadeState: showBody ? CrossFadeState.showFirst : CrossFadeState.showSecond, 
-        duration: Duration(milliseconds: ANIMATED_BODY_MS)
-      );
+    return AnimatedCrossFade(
+        firstChild: getBody(),
+        secondChild: Container(),
+        crossFadeState: showBody ? CrossFadeState.showFirst : CrossFadeState.showSecond,
+        duration: Duration(milliseconds: ANIMATED_BODY_MS));
   }
 
   @override
@@ -109,11 +109,10 @@ class _PetDetailPageState extends State<PetDetailPage> {
                 blur: 5,
                 opacity: 0.65,
                 child: Container(
-                  width: MediaQuery.of(context).size.width, 
+                  width: MediaQuery.of(context).size.width,
                   height: 80,
                   padding: EdgeInsets.fromLTRB(15, 10, 15, 10),
                   decoration: BoxDecoration(
-                    // color: red,
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(25),
                       topRight: Radius.circular(25)
@@ -123,7 +122,7 @@ class _PetDetailPageState extends State<PetDetailPage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(data["name"], 
+                      Text(data["name"],
                         style: TextStyle(fontSize: 22, color: textColor, fontWeight: FontWeight.w600),
                       ),
                       SizedBox(height: 8,),
@@ -183,7 +182,7 @@ class _PetDetailPageState extends State<PetDetailPage> {
                   padding: EdgeInsets.only(left: 15, right: 15),
                   child: Text(
                     data["description"], 
-                    style: TextStyle(height: 1.5, color: darker),
+                    style: TextStyle(height: 1.5),
                   ),
                 ),
                 SizedBox(height: 20,),
@@ -216,7 +215,8 @@ class _PetDetailPageState extends State<PetDetailPage> {
       Container(
         padding: EdgeInsets.all(20),
         decoration: BoxDecoration(
-          color: Colors.white,
+          // color: Colors.white,
+          color: Theme.of(context).cardColor,
           borderRadius: BorderRadius.circular(10),
           boxShadow: [
             BoxShadow(

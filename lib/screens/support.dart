@@ -23,7 +23,6 @@ class _SupportState extends State<Support> {
             pinned: true,
             floating: true,
             title: Text("Report"),
-            centerTitle: false,
           ),
 
           SliverPadding(
@@ -45,8 +44,9 @@ class _SupportState extends State<Support> {
                   child: Container(
                       height: MediaQuery.of(context).size.height * 0.3,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          border: Border.all(width: 0.2)
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(width: 0.2),
+                        color: Theme.of(context).cardColor,
                       ),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(10),
@@ -109,7 +109,9 @@ class _SupportState extends State<Support> {
             focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
                 borderSide: BorderSide(width: 0.5)
-            )
+            ),
+          filled: true,
+          fillColor: Theme.of(context).cardColor,
         ),
       ),
     );

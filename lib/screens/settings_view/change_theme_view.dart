@@ -10,6 +10,7 @@ class ChangeThemeView extends ViewModelWidget<MyThemeProvider> {
   @override
   Widget build(BuildContext context, MyThemeProvider myThemeProvider) {
     return Scaffold(
+      appBar: AppBar(),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Center(
@@ -23,7 +24,7 @@ class ChangeThemeView extends ViewModelWidget<MyThemeProvider> {
                   },
                   title: "Light",
                   bgColor: red,
-                  textColor: Colors.white,
+                  textColor: Theme.of(context).scaffoldBackgroundColor,
                 ),
               ),
               SizedBox(width: 20),
@@ -34,7 +35,18 @@ class ChangeThemeView extends ViewModelWidget<MyThemeProvider> {
                   },
                   title: "Dark",
                   bgColor: red,
-                  textColor: Colors.white,
+                  textColor: Theme.of(context).scaffoldBackgroundColor,
+                ),
+              ),
+              SizedBox(width: 20),
+              Expanded(
+                child: CustomButton(
+                  onTap: () {
+                    myThemeProvider.toggleTheme(ThemeMode.system);
+                  },
+                  title: "System",
+                  bgColor: red,
+                  textColor: Theme.of(context).scaffoldBackgroundColor,
                 ),
               )
             ],

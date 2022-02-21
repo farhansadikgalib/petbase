@@ -19,7 +19,6 @@ class _ServiceTypeViewState extends State<ServiceTypeView> {
             pinned: true,
             floating: true,
             title: Text("Service Types"),
-            centerTitle: false,
             actions: [
               IconButton(
                 onPressed: () {
@@ -55,7 +54,7 @@ class _ServiceTypeViewState extends State<ServiceTypeView> {
     return Container(
       padding: EdgeInsets.all(10),
       decoration: BoxDecoration(
-        color: appBgColor,
+        color: Theme.of(context).cardColor,
         borderRadius: BorderRadius.circular(10),
         boxShadow: [
           BoxShadow(

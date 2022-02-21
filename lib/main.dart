@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ViewModelBuilder<MyThemeProvider>.reactive(
       viewModelBuilder: () => MyThemeProvider(),
+      onModelReady: (viewModel)=> viewModel.getMyTheme(),
       builder: (context, viewModel, _) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,

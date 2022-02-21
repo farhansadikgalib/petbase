@@ -45,6 +45,9 @@ class MyTheme {
     // dialogTheme: DialogTheme(
     //   backgroundColor: kCardColorD,
     // ),
+    // buttonTheme: ButtonThemeData(
+    //   buttonColor: red.withOpacity(0.5),
+    // )
 
   );
 
@@ -54,7 +57,7 @@ class MyTheme {
     scaffoldBackgroundColor: appBgColor,
     primaryColor: primary,
     primarySwatch: Palette.kToDark,
-    backgroundColor: Colors.black,
+    backgroundColor: primary.withOpacity(.1),
     colorScheme: const ColorScheme.light(),
     // iconTheme: IconThemeData(
     //   color: Colors.black,
@@ -89,6 +92,9 @@ class MyTheme {
     // textSelectionTheme: TextSelectionThemeData(cursorColor: kVideoColor),
     // dialogTheme: DialogTheme(
     //   backgroundColor: kCardColorL,
+    // ),
+    // buttonTheme: ButtonThemeData(
+    //   buttonColor: red,
     // ),
 
   );

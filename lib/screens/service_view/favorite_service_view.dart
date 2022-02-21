@@ -20,7 +20,6 @@ class _FavoriteServiceViewState extends State<FavoriteServiceView> {
             title: Text("Favorite services"),
             pinned: true,
             floating: true,
-            centerTitle: false,
           ),
           SliverPadding(
             padding: EdgeInsets.all(15),
@@ -45,6 +44,7 @@ class _FavoriteServiceViewState extends State<FavoriteServiceView> {
         padding: EdgeInsets.all(15),
         margin: EdgeInsets.only(bottom: 20),
         decoration: BoxDecoration(
+          color: Theme.of(context).cardColor,
           borderRadius: BorderRadius.circular(10),
           boxShadow: [
             BoxShadow(
@@ -57,7 +57,7 @@ class _FavoriteServiceViewState extends State<FavoriteServiceView> {
         ),
         child: Row(
           children: [
-            SvgPicture.asset("assets/icons/pet.svg"),
+            SvgPicture.asset("assets/icons/pet.svg", color: Theme.of(context).primaryColor,),
             SizedBox(width: 10),
             Expanded(
               child: Column(

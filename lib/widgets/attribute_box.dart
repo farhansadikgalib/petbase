@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:pet_app/theme/color.dart';
 
 class AttributeBox extends StatelessWidget {
-  AttributeBox({ Key? key, required this.info, this.label = "", this.icon, this.bgColor = Colors.white, this.color = secondary}) : super(key: key);
+  AttributeBox({ Key? key, required this.info, this.label = "", this.icon, this.color = secondary}) : super(key: key);
   final IconData? icon;
   final String info;
   final String label;
-  final Color bgColor;
   final Color color;
 
   @override
@@ -17,7 +16,7 @@ class AttributeBox extends StatelessWidget {
         margin: EdgeInsets.only(right: 15),
         padding: EdgeInsets.all(5),
         decoration: BoxDecoration(
-          color: bgColor,
+          color: Theme.of(context).cardColor,
           borderRadius: BorderRadius.circular(10),
           boxShadow: [
             BoxShadow(

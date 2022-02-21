@@ -71,10 +71,10 @@ class _HomePageState extends State<HomePage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  _menuItem("Services", Icon(Icons.add_box, color: blue,), serviceTypeRoute),
-                  _menuItem("Pet Articles", Icon(Icons.article, color: Colors.lightGreen,), petArticleRoute),
-                  _menuItem("Support", Icon(Icons.headphones, color: red,), supportRoute),
-                  _menuItem("About", Icon(Icons.info, color: Colors.pink.shade200,), aboutRoute),
+                  _menuItem("Services", Icon(Icons.add_box, color: Theme.of(context).primaryColor), serviceTypeRoute),
+                  _menuItem("Pet Articles", Icon(Icons.article, color: Theme.of(context).primaryColor), petArticleRoute),
+                  _menuItem("Support", Icon(Icons.headphones, color: Theme.of(context).primaryColor), supportRoute),
+                  _menuItem("About", Icon(Icons.info, color: Theme.of(context).primaryColor), aboutRoute),
                 ],
               ),
             ),
