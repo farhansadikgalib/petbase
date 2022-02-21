@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:pet_app/theme/color.dart';
 
 class AddPetView extends StatefulWidget {
   const AddPetView({Key? key}) : super(key: key);

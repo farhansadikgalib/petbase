@@ -24,7 +24,7 @@ class _PetDetailPageState extends State<PetDetailPage> {
   void initState() {
     super.initState();
     data = widget.data;
-    Future.delayed(Duration(milliseconds: 200), (){
+    Future.delayed(Duration(milliseconds: 0), (){
       setState(() {
         showBody = true;
       });

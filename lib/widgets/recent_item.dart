@@ -17,7 +17,7 @@ class RecentItem extends StatelessWidget {
       child: Container(
             width: width,
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: Theme.of(context).cardColor,
               borderRadius: BorderRadius.circular(20),
               boxShadow: [
                 BoxShadow(
@@ -59,7 +59,7 @@ class RecentItem extends StatelessWidget {
                         children: [
                           Icon(Icons.star, size: 18, color: yellow,),
                           SizedBox(width: 5,),
-                          Text(data["rate"].toString(), style: TextStyle(fontSize: 15, color: primary, fontWeight: FontWeight.w500),),
+                          Text(data["rate"].toString(), style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),),
                         ],
                       ),
                       SizedBox(height: 10,),
@@ -67,15 +67,15 @@ class RecentItem extends StatelessWidget {
                         children: [
                           Icon(Icons.fiber_manual_record, size: 7, color: labelColor,),
                           SizedBox(width: 2,),
-                          Text(data["sex"], maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(color: textColor, fontSize: 12),),
+                          Text(data["sex"], maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 12),),
                           SizedBox(width: 5,),
                           Icon(Icons.fiber_manual_record, size: 7, color: labelColor,),
                           SizedBox(width: 2,),
-                          Text(data["age"], maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(color: textColor, fontSize: 12),),
+                          Text(data["age"], maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 12),),
                           SizedBox(width: 5,),
                           Icon(Icons.fiber_manual_record, size: 7, color: labelColor,),
                           SizedBox(width: 2,),
-                          Text(data["color"], maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(color: textColor, fontSize: 12),),
+                          Text(data["color"], maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 12),),
                           SizedBox(width: 5,),
                         ],
                       ),

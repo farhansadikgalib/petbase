@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pet_app/router.dart';
 import 'package:pet_app/theme/color.dart';
-import 'package:pet_app/utils/constant.dart';
 
 class ServicesView extends StatefulWidget {
   const ServicesView({Key? key}) : super(key: key);

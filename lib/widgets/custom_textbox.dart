@@ -10,33 +10,56 @@ class CustomTextBox extends StatelessWidget {
   final TextEditingController? controller;
   @override
   Widget build(BuildContext context) {
-    return Container(
-        alignment: Alignment.center,
-        padding: EdgeInsets.only(bottom: 3),
-        height: 40,
-        decoration: BoxDecoration(
-          color: textBoxColor,
-          border: Border.all(color: textBoxColor),
+    return TextField(
+      cursorColor: red,
+      textAlignVertical: TextAlignVertical.center,
+      readOnly: readOnly,
+      controller: controller,
+      decoration: InputDecoration(
+        prefixIcon: prefix,
+        suffixIcon: suffix,
+        border: InputBorder.none,
+        enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
-          boxShadow: [
-            BoxShadow(
-              color: shadowColor.withOpacity(0.05),
-              spreadRadius: .5,
-              blurRadius: .5,
-              offset: Offset(0, 1), // changes position of shadow
-            ),
-          ],
+          borderSide: BorderSide(color: Colors.transparent),
         ),
-        child: TextField(
-          readOnly: readOnly,
-          controller: controller,
-          decoration: InputDecoration(
-            prefixIcon: prefix,
-            suffixIcon: suffix,
-            border: InputBorder.none,
-            hintText: hint,
-            hintStyle: TextStyle(color: Colors.grey, fontSize: 15)),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10),
+          borderSide: BorderSide(color: Colors.transparent),
         ),
-      );
+        hintText: hint,
+        isDense: true,
+        contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical:0 ),
+        hintStyle: TextStyle(color: Colors.grey, fontSize: 15),
+      ),
+    );
+    // return Container(
+    //     alignment: Alignment.center,
+    //     height: 40,
+    //     decoration: BoxDecoration(
+    //       color: textBoxColor,
+    //       border: Border.all(color: textBoxColor),
+    //       borderRadius: BorderRadius.circular(10),
+    //       boxShadow: [
+    //         BoxShadow(
+    //           color: shadowColor.withOpacity(0.05),
+    //           spreadRadius: .5,
+    //           blurRadius: .5,
+    //           offset: Offset(0, 1), // changes position of shadow
+    //         ),
+    //       ],
+    //     ),
+    //     child: TextField(
+    //       textAlignVertical: TextAlignVertical.center,
+    //       readOnly: readOnly,
+    //       controller: controller,
+    //       decoration: InputDecoration(
+    //         prefixIcon: prefix,
+    //         suffixIcon: suffix,
+    //         border: InputBorder.none,
+    //         hintText: hint,
+    //         hintStyle: TextStyle(color: Colors.grey, fontSize: 15)),
+    //     ),
+    //   );
   }
 }

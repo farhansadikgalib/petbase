@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pet_app/router.dart';
 import 'package:pet_app/theme/color.dart';
-import 'package:pet_app/utils/constant.dart';
 
 class ServiceTypeView extends StatefulWidget {
   const ServiceTypeView({Key? key}) : super(key: key);

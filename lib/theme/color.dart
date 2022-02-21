@@ -28,4 +28,15 @@ const orange = Color(0xFFf5ba92);
 const sky = Color(0xFFABDEE6);
 const blue = Color(0xFF509BE4);
 
-const listColors = [green, purple, yellow, orange, sky, secondary, red, blue, pink, yellow,];
+// const listColors = [green, purple, yellow, orange, sky, secondary, red, blue, pink, yellow,];
+
+//my themes color
+//5c5c5c
+// const Color kCardColorD = const Color(0XFF151515);
+// const Color kCardColorD = const Color(0XFF131313);
+// const Color kCardColorD = const Color(0XFF2c2c2c);
+// const Color kCardColorD = const Color(0XFF5b5b5b);
+// const Color kCardColorD = const Color(0XFF242424);
+const Color kCardColorD = const Color(0XFF1b1b1b);
+
+Color kCardColorL = Colors.grey.shade100;

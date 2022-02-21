@@ -1,7 +1,6 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:pet_app/theme/color.dart';
-import 'package:pet_app/utils/constant.dart';
+import 'package:pet_app/router.dart';
 import 'package:pet_app/widgets/custom_button.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -22,8 +21,7 @@ class _VetPageState extends State<VetPage> {
             pinned: true,
             snap: true,
             floating: true,
-            centerTitle: false,
-            title: Text("Inform Your Vet", style: TextStyle(color: primary),),
+            title: Text("Inform Your Vet"),
             actions: [
               IconButton(
                 onPressed: () {
@@ -141,7 +139,8 @@ class _VetPageState extends State<VetPage> {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          border: Border.all(width: 0.2)
+          border: Border.all(width: 0.2),
+          color: Theme.of(context).cardColor,
         ),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(10),
@@ -195,6 +194,8 @@ class _VetPageState extends State<VetPage> {
             maxLines: 5,
             decoration: InputDecoration(
               hintText: "Upload pictures above and your observations and concerns here.",
+              fillColor: Theme.of(context).cardColor,
+              filled: true,
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
                 borderSide: BorderSide(width: 0.2)

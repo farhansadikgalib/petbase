@@ -21,7 +21,7 @@ class SettingItem extends StatelessWidget {
                 topRight: Radius.circular(15) ,
                 bottomRight: Radius.circular(15) 
               ),
-              color: cardColor,
+              color: Theme.of(context).cardColor,
               boxShadow: [
                 BoxShadow(
                   color: shadowColor.withOpacity(0.1),

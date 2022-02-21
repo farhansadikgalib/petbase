@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pet_app/utils/constant.dart';
 import 'package:pet_app/widgets/custom_button.dart';
 
 class PetSearchView extends StatefulWidget {

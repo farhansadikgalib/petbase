@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
+import 'package:pet_app/router.dart';
 import 'package:pet_app/theme/color.dart';
-import 'package:pet_app/utils/constant.dart';
 import 'package:pet_app/utils/data.dart';
 import 'package:pet_app/widgets/category_item.dart';
 import 'package:pet_app/widgets/custom_textbox.dart';
@@ -40,7 +40,7 @@ class _PetPageState extends State<PetPage> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text("Pets",
-              style: TextStyle(fontSize: 28, color: Colors.black87, fontWeight: FontWeight.w600)
+              style: TextStyle(fontSize: 28, fontWeight: FontWeight.w600)
             ),
           ],
         ),
@@ -58,7 +58,7 @@ class _PetPageState extends State<PetPage> {
               child: Row(
                 children: [
                   Expanded(
-                    child: CustomTextBox(hint: "Search By Breed", prefix: Icon(Icons.search, color: Colors.grey), )
+                    child: CustomTextBox(hint: "Search By Breed", prefix: Icon(Icons.search, color: Colors.grey, size: 20,),)
                   ),
                   SizedBox(width: 10,),
                   IconBox(child: Icon(Icons.filter_list_rounded, color: Colors.white), bgColor: secondary, radius: 10,)

@@ -9,10 +9,27 @@ import 'package:pet_app/screens/service_view/service_detail_view.dart';
 import 'package:pet_app/screens/service_view/service_search_view.dart';
 import 'package:pet_app/screens/service_view/service_type.dart';
 import 'package:pet_app/screens/service_view/services_view.dart';
+import 'package:pet_app/screens/settings_view/change_theme_view.dart';
 import 'package:pet_app/screens/support.dart';
 import 'package:pet_app/screens/vet_view/vet_search_view.dart';
-import 'package:pet_app/utils/constant.dart';
 import 'screens/root_app.dart';
+
+const rootAppRoute = "/root_app";
+const petDetailRoute = "/pet_detail_page";
+
+const serviceTypeRoute = "/service_Type_page";
+const petArticleRoute = "/pet_Article_page";
+const supportRoute = "/support_page";
+const aboutRoute = "/about_page";
+const servicesRoute = "/services_page";
+const serviceDetailRoute = "/service_detail_page";
+const petSearchRoute = "/pet_search_page";
+const vetSearchRoute = "/vet_search_page";
+const serviceSearchRoute = "/service_search_page";
+const favoritePetRoute = "/favorite_pet_page";
+const favoriteServiceRoute = "/favorite_service_page";
+const changeThemeRoute = "/change_theme_page";
+
 
 Route<dynamic> generateRoute(RouteSettings setting) {
   final Map<String, dynamic> args = checkIsNullValue(setting.arguments) ? new Map<String, dynamic>() : setting.arguments as Map<String, dynamic>;
@@ -45,6 +62,8 @@ Route<dynamic> generateRoute(RouteSettings setting) {
       return MaterialPageRoute(builder: (context) => FavoritePetView());
     case favoriteServiceRoute :
       return MaterialPageRoute(builder: (context) => FavoriteServiceView());
+    case changeThemeRoute :
+      return MaterialPageRoute(builder: (context) => ChangeThemeView());
     default:
       return MaterialPageRoute(
         builder: (context) => Scaffold(

@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pet_app/router.dart';
 import 'package:pet_app/screens/settings_view/add_pet_view.dart';
 import 'package:pet_app/theme/color.dart';
-import 'package:pet_app/utils/constant.dart';
 import 'package:pet_app/utils/data.dart';
 import 'package:pet_app/widgets/custom_image.dart';
 import 'package:pet_app/widgets/icon_box.dart';
@@ -50,7 +50,7 @@ class _SettingViewState extends State<SettingView> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("Settings", style: TextStyle(color: textColor, fontSize: 24, fontWeight: FontWeight.w600),),
+                  Text("Settings", style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),),
                 ],
               )
             ),
@@ -75,9 +75,8 @@ class _SettingViewState extends State<SettingView> {
                   width: 80, height: 80, radius: 15,
                 ),
                 SizedBox(height: 12,),
-                Text("Sangvaleap",
+                Text("User Name",
                   style: TextStyle(
-                    color: textColor,
                     fontSize: 20,
                     fontWeight: FontWeight.w500
                   ),
@@ -87,12 +86,12 @@ class _SettingViewState extends State<SettingView> {
           ),
 
           SizedBox(height: 30),
-          // SettingItem(title: "Appearance", leadingIcon: Icons.dark_mode_outlined, leadingIconColor: blue,
-          //   onTap: (){
-          //
-          //   }
-          // ),
-          // SizedBox(height: 10),
+          SettingItem(title: "Appearance", leadingIcon: Icons.dark_mode_outlined, leadingIconColor: blue,
+            onTap: (){
+            Navigator.pushNamed(context, changeThemeRoute);
+            }
+          ),
+          SizedBox(height: 10),
           SettingItem(title: "Add Pet", leadingIcon: Icons.add_box, leadingIconColor: blue,
             onTap: (){
               Navigator.push(context, MaterialPageRoute(builder: (context)=>AddPetView()));

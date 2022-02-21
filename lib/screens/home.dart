@@ -1,7 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:pet_app/router.dart';
 import 'package:pet_app/theme/color.dart';
-import 'package:pet_app/utils/constant.dart';
 import 'package:pet_app/utils/data.dart';
 import 'package:pet_app/widgets/category_item.dart';
 import 'package:pet_app/widgets/pet_item.dart';
@@ -25,7 +25,6 @@ class _HomePageState extends State<HomePage> {
             pinned: true,
             snap: true,
             floating: true,
-            foregroundColor: Colors.black,
             actions: [
               // Padding(
               //   padding: const EdgeInsets.all(8.0),
@@ -142,7 +141,7 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(height: 25,),
                 Padding(
                   padding: const EdgeInsets.fromLTRB(15, 0, 15, 25),
-                  child: Text("Adopt Me", style: TextStyle(color: textColor, fontWeight: FontWeight.w700, fontSize: 24,)),
+                  child: Text("Adopt Me", style: TextStyle(fontWeight: FontWeight.w700, fontSize: 24,)),
                 ),
                 getPets(),
                 SizedBox(height: 55),
