@@ -24,13 +24,12 @@ class BottomBarItem extends StatelessWidget {
           alignment: Alignment.center,
           children: <Widget>[
             Container(
-              padding: EdgeInsets.all(7),
+              padding: EdgeInsets.all(icon == "assets/icons/behaviorSearch.svg"?10:7),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(50),
-                // color: isActive ? primary.withOpacity(.1) : Colors.transparent,
                 color: isActive ? Theme.of(context).backgroundColor : Colors.transparent,
+                shape: BoxShape.circle,
               ),
-              child: SvgPicture.asset(icon, color: isActive ? activeColor : Colors.grey.shade700, width: 25, height: 25,),
+              child: SvgPicture.asset(icon, color: isActive ? activeColor : Colors.grey.shade700, width: 25, height: 25),
             ),
             // Positioned(
             //   bottom: -8,

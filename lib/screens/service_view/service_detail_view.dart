@@ -57,7 +57,8 @@ class _ServiceDetailViewState extends State<ServiceDetailView> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset("assets/img.png", scale: 2,),
+              // Image.asset("assets/img.png", scale: 2,),
+              Image.asset("assets/petService.png", color: Theme.of(context).primaryColor, scale: 7,),
               const SizedBox(width: 20),
               Column(
                 children: [

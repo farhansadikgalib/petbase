@@ -71,7 +71,8 @@ class _ServiceTypeViewState extends State<ServiceTypeView> {
         },
         child: Column(
           children: [
-            Expanded(child: Image.asset("assets/icons/appLogo.png")),
+            //Expanded(child: Image.asset("assets/icons/appLogo.png")),
+            Expanded(child: Image.asset("assets/petService.png", color: Theme.of(context).primaryColor, scale: 6,)),
             Text("Service Name")
           ],
         ),

@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:pet_app/widgets/custom_button.dart';
 
-class PetSearchView extends StatefulWidget {
-  const PetSearchView({Key? key}) : super(key: key);
+class PetBehaviorSearchView extends StatefulWidget {
+  const PetBehaviorSearchView({Key? key}) : super(key: key);
 
   @override
-  _PetSearchViewState createState() => _PetSearchViewState();
+  _PetBehaviorSearchViewState createState() => _PetBehaviorSearchViewState();
 }
 
-class _PetSearchViewState extends State<PetSearchView> {
+class _PetBehaviorSearchViewState extends State<PetBehaviorSearchView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         elevation: 0.5,
-        title: Text("Pet Search"),
+        title: Text("Personality Search"),
         centerTitle: false,
       ),
       body: ListView(
@@ -22,12 +22,27 @@ class _PetSearchViewState extends State<PetSearchView> {
         children: [
           Column(
             children: [
+              // CustomButton(
+              //   onTap: () {
+              //     Navigator.pushNamedAndRemoveUntil(context, rootAppRoute, (route) => false, arguments: {"data" : 1});
+              //   },
+              //   title: "Search By Breed",
+              //   bgColor: Colors.green,
+              //   radius: 50,
+              //   width: 200,
+              // ),
+              Text('Our propriety matching method suggests breeds uniquely suited to you. '
+                  'To "Find your best friend", choose a need or purpose below. '
+                  'Select "null" instead of leaving fields blank.'),
+
               const SizedBox(height: 30),
-              _textField("Pet Type"),
+              _textField("Purpose 1"),
               const SizedBox(height: 10),
-              _textField("Breed"),
+              _textField("Purpose 2"),
               const SizedBox(height: 10),
-              _textField("Zip Code"),
+              _textField("Purpose 3"),
+              const SizedBox(height: 10),
+              _textField("Purpose 4"),
               const SizedBox(height: 30),
               CustomButton(
                 onTap: () {},

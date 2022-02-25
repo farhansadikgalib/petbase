@@ -1,23 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pet_app/router.dart';
 import 'package:pet_app/theme/color.dart';
 
-class FavoriteServiceView extends StatefulWidget {
-  const FavoriteServiceView({Key? key}) : super(key: key);
+class FavoriteVetView extends StatefulWidget {
+  const FavoriteVetView({Key? key}) : super(key: key);
 
   @override
-  _FavoriteServiceViewState createState() => _FavoriteServiceViewState();
+  _FavoriteVetViewState createState() => _FavoriteVetViewState();
 }
 
-class _FavoriteServiceViewState extends State<FavoriteServiceView> {
+class _FavoriteVetViewState extends State<FavoriteVetView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
-            title: Text("Favorite services"),
+            title: Text("Favorite Vets"),
             pinned: true,
             floating: true,
           ),
@@ -38,7 +37,7 @@ class _FavoriteServiceViewState extends State<FavoriteServiceView> {
   Widget _servicesCardWidget() {
     return GestureDetector(
       onTap: () {
-        Navigator.pushNamed(context, serviceDetailRoute);
+        // Navigator.pushNamed(context, serviceDetailRoute);
       },
       child: Container(
         padding: EdgeInsets.all(15),
@@ -57,20 +56,19 @@ class _FavoriteServiceViewState extends State<FavoriteServiceView> {
         ),
         child: Row(
           children: [
-            //SvgPicture.asset("assets/icons/pet.svg", color: Theme.of(context).primaryColor,),
-            Image.asset("assets/petService.png", color: Theme.of(context).primaryColor, scale: 6,),
+            Image.asset("assets/vets.png", color: Theme.of(context).primaryColor, scale: 2.5,),
             SizedBox(width: 10),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text("Name"),
+                  Text("Address"),
                   Text("City"),
                   Text("ZipCode"),
                 ],
               ),
             ),
-            Text("State")
           ],
         ),
       ),

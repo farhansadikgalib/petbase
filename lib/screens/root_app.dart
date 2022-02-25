@@ -2,7 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:pet_app/screens/home.dart';
 import 'package:pet_app/screens/pet.dart';
-import 'package:pet_app/screens/settings_view/setting_view.dart';
+import 'package:pet_app/screens/pet_behavior_search_view.dart';
+import 'package:pet_app/screens/pet_search_view.dart';
 import 'package:pet_app/screens/vet_view/vet_page.dart';
 import 'package:pet_app/theme/color.dart';
 import 'package:pet_app/utils/constant.dart';
@@ -40,11 +41,20 @@ class _RootAppState extends State<RootApp>  with TickerProviderStateMixin {
       "title" : ""
     },
     {
-      "icon" : "assets/icons/setting-border.svg",
-      "active_icon" : "assets/icons/setting.svg",
-      "page" : SettingView(),
+      "icon" : "assets/icons/search.svg",
+      "active_icon" : "assets/icons/searchZoom.svg",
+      "page" : PetSearchView(),
       "title" : ""
     },
+
+    {
+      "icon" : "assets/icons/behaviorSearch.svg",
+      "active_icon" : "assets/icons/behaviorSearch.svg",
+      "page" : PetBehaviorSearchView(),
+      "title" : ""
+    },
+
+
   ];
 //====== set animation=====
   late final AnimationController _controller = AnimationController(

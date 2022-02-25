@@ -44,6 +44,7 @@ class _ServicesViewState extends State<ServicesView> {
         margin: EdgeInsets.only(bottom: 20),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
+          color: Theme.of(context).cardColor,
           boxShadow: [
             BoxShadow(
               color: primary,
@@ -55,7 +56,8 @@ class _ServicesViewState extends State<ServicesView> {
         ),
         child: Row(
           children: [
-            SvgPicture.asset("assets/icons/pet.svg"),
+            // SvgPicture.asset("assets/icons/pet.svg"),
+            Image.asset("assets/petService.png", color: Theme.of(context).primaryColor, scale: 7,),
             SizedBox(width: 10),
             Expanded(
               child: Column(
