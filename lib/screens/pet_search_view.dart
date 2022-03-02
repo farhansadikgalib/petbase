@@ -12,11 +12,11 @@ class _PetSearchViewState extends State<PetSearchView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0.5,
-        title: Text("Pet Search"),
-        centerTitle: false,
-      ),
+      // appBar: AppBar(
+      //   elevation: 0.5,
+      //   title: Text("Pet Search"),
+      //   centerTitle: false,
+      // ),
       body: ListView(
         padding: const EdgeInsets.all(15.0),
         children: [

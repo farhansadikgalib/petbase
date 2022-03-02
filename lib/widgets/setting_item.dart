@@ -15,7 +15,7 @@ class SettingItem extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: const EdgeInsets.only(top: 15, bottom: 15, left: 10, right: 10),
+        padding: const EdgeInsets.only(top: 6, bottom: 6, left: 10, right: 10),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: leadingIcon != null
@@ -36,7 +36,7 @@ class SettingItem extends StatelessWidget {
                     ),
                     child: Icon(
                       leadingIcon,
-                      size: 24,
+                      size: 18,
                       color: leadingIconColor,
                     ),
                   ),
@@ -46,7 +46,7 @@ class SettingItem extends StatelessWidget {
                   Expanded(
                     child: Text(
                       title,
-                      style: TextStyle(fontSize: 16),
+                      style: TextStyle(fontSize: 14),
                     ),
                   ),
                 ]

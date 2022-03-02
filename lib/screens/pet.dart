@@ -1,11 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:pet_app/router.dart';
-import 'package:pet_app/theme/color.dart';
 import 'package:pet_app/utils/data.dart';
 import 'package:pet_app/widgets/category_item.dart';
-import 'package:pet_app/widgets/custom_textbox.dart';
-import 'package:pet_app/widgets/icon_box.dart';
 import 'package:pet_app/widgets/recent_item.dart';
 
 class PetPage extends StatefulWidget {
@@ -20,12 +17,12 @@ class _PetPageState extends State<PetPage> {
   Widget build(BuildContext context) {
     return CustomScrollView(
         slivers: <Widget>[
-          SliverAppBar(
-            pinned: true,
-            snap: true,
-            floating: true,
-            title: getHeader()
-          ),
+          // SliverAppBar(
+          //   pinned: true,
+          //   snap: true,
+          //   floating: true,
+          //   title: getHeader()
+          // ),
           SliverToBoxAdapter(
             child: getBody()
           )
@@ -53,19 +50,20 @@ class _PetPageState extends State<PetPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 15, right: 15),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: CustomTextBox(hint: "Search By Breed", prefix: Icon(Icons.search, color: Colors.grey, size: 20,),)
-                  ),
-                  SizedBox(width: 10,),
-                  IconBox(child: Icon(Icons.filter_list_rounded, color: Colors.white), bgColor: secondary, radius: 10,)
-                ],
-              ),
-            ),
-            SizedBox(height: 20,),
+            // Padding(
+            //   padding: const EdgeInsets.only(left: 15, right: 15),
+            //   child: Row(
+            //     children: [
+            //       Expanded(
+            //         child: CustomTextBox(hint: "Search By Breed", prefix: Icon(Icons.search, color: Colors.grey, size: 20,),)
+            //       ),
+            //       SizedBox(width: 10,),
+            //       IconBox(child: Icon(Icons.filter_list_rounded, color: Colors.white), bgColor: secondary, radius: 10,)
+            //     ],
+            //   ),
+            // ),
+            // SizedBox(height: 20,),
+            SizedBox(height: 10,),
             listCategories(),
             SizedBox(height: 20,),
             getPets(),

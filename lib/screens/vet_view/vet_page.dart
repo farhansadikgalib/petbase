@@ -1,6 +1,5 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:pet_app/router.dart';
 import 'package:pet_app/widgets/custom_button.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -17,20 +16,20 @@ class _VetPageState extends State<VetPage> {
     return Scaffold(
       body: CustomScrollView(
         slivers: [
-          SliverAppBar(
-            pinned: true,
-            snap: true,
-            floating: true,
-            title: Text("Inform Your Vet"),
-            actions: [
-              IconButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, vetSearchRoute);
-                },
-                icon: Icon(Icons.search),
-              ),
-            ],
-          ),
+          // SliverAppBar(
+          //   pinned: true,
+          //   snap: true,
+          //   floating: true,
+          //   title: Text("Inform Your Vet"),
+          //   actions: [
+          //     // IconButton(
+          //     //   onPressed: () {
+          //     //     Navigator.pushNamed(context, vetSearchRoute);
+          //     //   },
+          //     //   icon: Icon(Icons.search),
+          //     // ),
+          //   ],
+          // ),
           SliverList(delegate: SliverChildListDelegate([
             Column(
               children: [
@@ -139,7 +138,7 @@ class _VetPageState extends State<VetPage> {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          border: Border.all(width: 0.2),
+          border: Border.all(width: 1, color: Colors.green),
           color: Theme.of(context).cardColor,
         ),
         child: ClipRRect(
