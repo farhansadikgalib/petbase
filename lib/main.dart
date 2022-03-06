@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:pet_app/screens/auth_views/login_view.dart';
 import 'package:pet_app/theme/my_theme.dart';
 import 'package:pet_app/view_models/my_theme_view_model.dart';
 import 'package:stacked/stacked.dart';
-import 'screens/root_app.dart';
 import 'router.dart' as router;
 
 void main() {
@@ -23,7 +23,8 @@ class MyApp extends StatelessWidget {
           themeMode: viewModel.themeMode,
           theme: MyTheme.lightTheme,
           darkTheme: MyTheme.darkTheme,
-          home: RootApp(),
+          // home: RootApp(),
+          home: LoginView(),
         );
       },
     );

@@ -2,13 +2,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pet_app/router.dart';
-import 'package:pet_app/screens/home.dart';
+import 'package:pet_app/screens/auth_views/login_view.dart';
+import 'package:pet_app/screens/home_view.dart';
 import 'package:pet_app/screens/pet.dart';
 import 'package:pet_app/screens/pet_behavior_search_view.dart';
 import 'package:pet_app/screens/pet_search_view.dart';
 import 'package:pet_app/screens/pets/pets_type_view.dart';
 import 'package:pet_app/screens/service_view/service_search_view.dart';
-import 'package:pet_app/screens/settings_view/add_pet_view.dart';
 import 'package:pet_app/screens/settings_view/notifications_view.dart';
 import 'package:pet_app/screens/vet_view/vet_page.dart';
 import 'package:pet_app/screens/vet_view/vet_search_view.dart';
@@ -33,7 +33,7 @@ class _RootAppState extends State<RootApp>  with TickerProviderStateMixin {
     {
       "icon" : "assets/icons/home-border.svg",
       "active_icon" : "assets/icons/home.svg",
-      "page" : HomePage(),
+      "page" : HomeView(),
       "title" : ""
     },
     {
@@ -348,7 +348,7 @@ class _RootAppState extends State<RootApp>  with TickerProviderStateMixin {
                 actions: [
                   CupertinoActionSheetAction(
                     onPressed: (){
-
+                      Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context)=>LoginView()), (route) => false);
                     },
                     child: Text("Log Out", style: TextStyle(color: actionColor),),
                   )
