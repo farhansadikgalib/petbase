@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -18,7 +17,7 @@ class _AddPetViewState extends State<AddPetView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Add Pet"),
+        title: Text("Add/Edit Pet"),
         centerTitle: false,
         elevation: 0.5,
       ),

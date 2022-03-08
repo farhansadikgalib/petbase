@@ -46,6 +46,7 @@ List pets = [
     "owner_photo": profile,
     "sex": "Male",
     "age": "5 Months",
+    "breed": "pug",
     "color": "Brown",
     "album" : [
       "https://images.unsplash.com/photo-1558788353-f76d92427f16??ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
@@ -69,6 +70,7 @@ List pets = [
     "owner_photo": profile,
     "sex": "Male",
     "age": "5 Months",
+    "breed": "labrador",
     "color": "Brown",
     "album" : [
       "https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
@@ -91,6 +93,7 @@ List pets = [
     "owner_photo": profile,
     "sex": "Male",
     "age": "5 Months",
+    "breed": "German Shephard",
     "color": "Brown",
     "album" : [
       "https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
@@ -113,6 +116,7 @@ List pets = [
     "owner_photo": profile,
     "sex": "Male",
     "age": "5 Months",
+    "breed": "Pitbull",
     "color": "Brown",
     "album" : [
       "https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
@@ -135,6 +139,7 @@ List pets = [
     "owner_photo": profile,
     "sex": "Male",
     "age": "5 Months",
+    "breed": "pug",
     "color": "Brown",
     "album" : [
       "https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
@@ -157,6 +162,7 @@ List pets = [
     "owner_photo": profile,
     "sex": "Male",
     "age": "5 Months",
+    "breed": "Spitz",
     "color": "Brown",
     "album" : [
       "https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
@@ -179,6 +185,7 @@ List pets = [
     "owner_photo": profile,
     "sex": "Male",
     "age": "5 Months",
+    "breed": "pug",
     "color": "Brown",
     "album" : [
       "https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
@@ -201,6 +208,7 @@ List pets = [
     "owner_photo": profile,
     "sex": "Male",
     "age": "5 Months",
+    "breed": "pug",
     "color": "Brown",
     "album" : [
       "https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
